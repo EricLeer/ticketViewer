@@ -1,0 +1,37 @@
+var tickets = [
+  {
+    title: "Ticket 1",
+    region: "Amsterdam"
+  },
+  {
+    title: "Ticket 2",
+    region: "Amsterdam"
+  },
+  {
+    title: "Ticket 3",
+    region: "Rotterdam"
+  },
+  {
+    title: "Ticket 4",
+    region: "Den Hag"
+  }
+];
+
+var experts = [
+  {
+    name: "Expert 1",
+    operating_region: "Amsterdam"
+  },
+  {
+    name: "Expert 2",
+    operating_region: "Berlin"
+  },
+  {
+    name: "Expert 3",
+    operating_region: "Amsterdam"
+  },
+  {
+    name: "Expert 4",
+    operating_region: "Den Hag"
+  }
+];

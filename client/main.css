@@ -1,0 +1,16 @@
+/* CSS declarations go here */
+.tickets {
+    border-style: dashed;
+    margin-bottom: 5px;
+}
+
+.experts { 
+    border-style: dashed;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    
+}
+
+.forms {
+    padding: 17px;
+}

@@ -1,0 +1,96 @@
+<div class="container text-center">
+    <div class="row ticket-info">
+      <div class="col-md-4 col-md-offset-2">
+            <h3>Tickets</h3>
+            <div class="" ng-repeat="ticket in $ctrl.tickets">
+              <div class="row tickets" style="background-color: {{ticket.color}};">
+                <div class="col-xs-5">
+                  <h5>Title</h5>
+                  <h4>{{ticket.title}}</h4>
+                </div>
+                <div class="col-xs-5">
+                  <h5>Region</h5>
+                  <h4>{{ticket.region}}</h4>
+                </div>
+                <div class="col-xs-1">
+                  <button class="btn" ng-click="removeTicket(ticket)">x</button>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+          <h3>Available Experts</h3>
+          <div class="" ng-repeat="expert in $ctrl.experts">
+              <div class="row experts" style="background-color: {{expert.color}};">
+                <div class="col-xs-5">
+                  <h5>Expert</h5>
+                  <h4>{{expert.name}}</h4>
+                </div>
+                <div class="col-xs-5">
+                  <h5>Region</h5>
+                  <h4>{{expert.operating_region}}</h4>
+                </div>
+                <div class="col-xs-1">
+                  <button class="btn" ng-click="removeExpert(expert)">x</button>
+                </div>
+          </div>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4 col-md-offset-2 text-left forms">
+        <form>
+          <div class="col-md-5">
+            <label>Ticket title:</label>
+          </div>
+          <div class="col-md-7">
+            <input type="text" ng-model="addTicket.title" />
+          </div>
+          <div class="col-md-5">
+            <label>Region of Ticket:</label>
+          </div>
+          <div class="col-md-7">
+            <input type="text" ng-model="addTicket.region" />
+          </div>
+          <div class="col-md-12 text-right">
+            <button ng-click="submitTicket()">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-xs-4 forms">
+        <form>
+          <div class="col-md-6">
+            <label>Expert name:</label>
+          </div>
+          <div class="col-md-6">
+            <input type="text" ng-model="addExpert.name" />
+          </div>
+          <div class="col-md-6">
+            <label>Region of Expert:</label>
+          </div>
+          <div class="col-md-6">
+            <input type="text" ng-model="addExpert.operating_region" />
+          </div>
+          <div class="col-md-12 text-right">
+            <button ng-click="submitExpert()">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-4">
+        <button class="btn" ng-click="match()">Match them!</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-4">
+        <h3>Assignments</h3>  
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1" ng-repeat="assignment in $ctrl.assignments">
+        <h4>{{ assignment.techWorking }} is going to work on {{assignment.title}}</h4>
+        <p>matched at {{ assignment.matchDate | date }}</p>
+      </div>
+    </div>
+  </div>
